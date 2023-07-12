@@ -14,20 +14,6 @@ Physics-informed neural networks (PINNs) have emerged as promising surrogate mod
     <img src="./fig/git_atpinn.jpg" width=100%/>
 </div>
 
-<div  align="center">    
-    The architecture sketch of four different auxiliary-task learning modes.
-</div>
-</p>
-
-We employ gradient cosine similarity to leverage the auxiliary loss in conjunction with the main loss. The gradient cosine similarity is defined as follows: 
-
-<div  align="center">    
-    <img src="./fig/equation.jpg" width=100%/>
-</div>
-
-The gradient cosine similarity measures the degree of correlation between the tasks, thereby approximating the extent to which the gradient descent directions align between the main task and the auxiliary tasks.
-
-
 ### Requirements
 
 1. Torch == 1.12.x
@@ -39,10 +25,6 @@ The gradient cosine similarity measures the degree of correlation between the ta
 All the PDEs case studies we used in our benchmark are download from [PDEBench Datasets](https://github.com/pdebench/PDEBench), and their files are publicly available on [PDEBench Datasets](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-2986). We randomly selected 100 tasks for each PDE problem to build a sub-dataset for our experiments. The sub-dataset was published in Google Drive.
 
 ### Results
-
-<div  align="center">    
-    The comprehensive performance evaluation of PINN and ATL-PINNs.
-</div>
 
 <div  align="center">    
     <img src="./fig/result.jpg" width=100%/>
