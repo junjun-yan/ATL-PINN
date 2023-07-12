@@ -11,12 +11,22 @@ Physics-informed neural networks (PINNs) have emerged as promising surrogate mod
 </p>
 
 <div  align="center">    
-    <img src="./pic/ST-PINN.jpg" width=80%/>
+    <img src="./fig/git_atpinn.jpg" width=100%/>
 </div>
 
-<div  align="left">    
-    The architecture of ST-PINN. The blue line displays the training process, while the red line presents the pseudo label generating process.
+<div  align="center">    
+    The architecture sketch of four different auxiliary-task learning modes.
 </div>
+</p>
+
+We employ gradient cosine similarity to leverage the auxiliary loss in conjunction with the main loss. The gradient cosine similarity is defined as follows: 
+
+<div  align="center">    
+    <img src="./fig/equation.jpg" width=100%/>
+</div>
+
+The gradient cosine similarity measures the degree of correlation between the tasks, thereby approximating the extent to which the gradient descent directions align between the main task and the auxiliary tasks.
+
 
 ### Requirements
 
@@ -31,10 +41,9 @@ All the PDEs case studies we used in our benchmark are download from [PDEBench D
 ### Results
 
 <div  align="center">    
-    <img src="./pic/Burgers1D.png" width=100%/>
+    The comprehensive performance evaluation of PINN and ATL-PINNs.
 </div>
 
-<div  align="left">    
-    The prediction of PINN and ST-PINN at three different times (t=0.3, t=0.6, and t=1). The blue line denotes ST-PINN, while the red line represents PINN. The gray line is the reference.
+<div  align="center">    
+    <img src="./fig/result.jpg" width=100%/>
 </div>
-<br>
