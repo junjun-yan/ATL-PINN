@@ -22,7 +22,7 @@ Physics-informed neural networks (PINNs) have emerged as promising surrogate mod
 
 ### Dataset
 
-All the PDEs case studies we used in our benchmark are download from [PDEBench Datasets](https://github.com/pdebench/PDEBench), and their files are publicly available on [PDEBench Datasets](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-2986). We randomly selected 100 tasks for each PDE problem to build a sub-dataset for our experiments. The sub-dataset was published in Google Drive.
+All the PDEs case studies we used in our benchmark are download from [PDEBench Datasets](https://github.com/pdebench/PDEBench), and their files are publicly available on [PDEBench Datasets](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-2986). We randomly selected 100 tasks for each PDE problem to build a sub-dataset for our experiments. The sub-dataset was published in [Google Drive](https://drive.google.com/drive/folders/1n1lHasFJGIEEg_Nm792at2rJeB1QQh0W?usp=sharing).
 
 ### Results
 
