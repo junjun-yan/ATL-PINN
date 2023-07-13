@@ -1,6 +1,6 @@
 # ALT-PINN
 
-An official source code for paper "Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving", submitted to Computer Methods in Applied Mechanics and Engineering, CMMAE. Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
+An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving](https://arxiv.org/abs/2307.06167), submitted to Computer Methods in Applied Mechanics and Engineering, CMMAE. Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
 
 -------------
 
@@ -29,3 +29,19 @@ All the PDEs case studies we used in our benchmark are download from [PDEBench D
 <div  align="center">    
     <img src="./fig/result.jpg" width=100%/>
 </div>
+
+### Citation
+
+If you use code or datasets in this repository for your research, please cite our paper.
+
+```
+@misc{yan2023auxiliarytasks,
+      title={Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving}, 
+      author={Junjun Yan and Xinhai Chen and Zhichao Wang and Enqiang Zhou and Jie Liu},
+      year={2023},
+      eprint={2307.06167},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
