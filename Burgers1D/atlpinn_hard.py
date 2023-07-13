@@ -1,7 +1,3 @@
-import sys
-
-sys.path.append("/root/ATLPINN")
-
 import torch
 from utilities import relative_error
 from atlpinns import ATLPINN_Burgers1D
@@ -31,13 +27,13 @@ N_eqns = 10000
 task_number = 2
 batch_size = 20000
 
-data_path = r'/root/autodl-tmp/133136'
-print_path = r'/root/ATLPINN/log4loss/burgers_hard_+1_new.txt'
+data_path = r'/root/ATLPINN/data/Burgers.h5'
+print_path = r'/root/ATLPINN/result/burgers_hard.txt'
 
 
 def run(tasks):
     create_date = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
-    log_path = "/root/tf-logs/burgers-hard-%d-%s" % (tasks[0], create_date)
+    log_path = "/root/ATLPINN/log/burgers-hard-%d-%s.log" % (tasks[0], create_date)
 
     ### get data
     dataset = Dataset1D(data_path, tasks)
@@ -49,7 +45,7 @@ def run(tasks):
 
     ### modal and train | test
     network = NeuralNetwork_Hard(X, shared_layers, special_layers, task_number, device)
-    model = MTPINN_Burgers1D(X_init, Y_init, X_l_bound, X_r_bound, X_test, Y_test, X_eqns, network, batch_size, nu,
+    model = ATLPINN_Burgers1D(X_init, Y_init, X_l_bound, X_r_bound, X_test, Y_test, X_eqns, network, batch_size, nu,
                              init_weight, bound_weight, log_path, learning_rate, task_number, device)
 
     model.logging("number init: %d" % X_init.shape[0])
@@ -58,7 +54,7 @@ def run(tasks):
     model.logging("number test: %d" % X_test.shape[0])
 
     # train
-    model.train(adam_it=20000, lbfgs_it=0, clip_grad=False, decay_it=10000, decay_rate=0.5, print_it=10,
+    model.train(adam_it=30000, lbfgs_it=0, clip_grad=False, decay_it=10000, decay_rate=0.5, print_it=10,
                 evaluate_it=100, cosine_sim=False)
 
     # test
@@ -78,11 +74,6 @@ def run(tasks):
 
 
 if __name__ == '__main__':
-    with open('/root/ATLPINN/Burgers1D/index.txt', 'r') as f:
-        all_tasks = f.readlines()
-
-        for i in range(0, 100, 2):
-            task1 = int(all_tasks[i].strip())
-            task2 = int(all_tasks[i + 1].strip())
-            tasks = [task1, task2]
-            run(tasks)
+    for i in range(0, 100):
+        task = [i]
+        run(task)

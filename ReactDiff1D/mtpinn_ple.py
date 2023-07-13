@@ -1,6 +1,6 @@
 import torch
 from utilities import relative_error
-from mtpinns import MTPINN_ReactDiff1D
+from atlpinns import ATLPINN_ReactDiff1D
 from networks import NeuralNetwork_Soft_PLE
 from dataset import Dataset1D
 import numpy as np
@@ -48,7 +48,7 @@ def run(tasks):
 
     ### modal and train | test
     network = NeuralNetwork_Soft_PLE(X, shared_layers, expert_layers, tower_layers, task_number, device)
-    model = MTPINN_ReactDiff1D(X_init, Y_init, X_l_bound, X_r_bound, X_test, Y_test, X_eqns, network,
+    model = ATLPINN_ReactDiff1D(X_init, Y_init, X_l_bound, X_r_bound, X_test, Y_test, X_eqns, network,
                                batch_size, nu, rho, init_weight, bound_weight, log_path, learning_rate, task_number,
                                device)
 

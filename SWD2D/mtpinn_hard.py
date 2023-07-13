@@ -1,6 +1,6 @@
 import torch
 from utilities import relative_error
-from mtpinns import MTPINN_SWD2D
+from atlpinns import ATLPINN_SWD2D
 from networks import NeuralNetwork_Hard
 from dataset import Dataset2D
 import numpy as np
@@ -45,7 +45,7 @@ def run(tasks):
 
     ### modal and train | test
     network = NeuralNetwork_Hard(X, shared_layers, special_layers, task_number, device)
-    model = MTPINN_SWD2D(X_init, Y_init, X_bound, X_test, Y_test, X_eqns, network, batch_size, init_weight,
+    model = ATLPINN_SWD2D(X_init, Y_init, X_bound, X_test, Y_test, X_eqns, network, batch_size, init_weight,
                          bound_weight, log_path, learning_rate, task_number, device)
 
     model.logging("number init: %d" % X_init.shape[0])

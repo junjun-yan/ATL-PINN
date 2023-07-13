@@ -1,7 +1,3 @@
-import sys
-
-sys.path.append("/root/ATLPINN")
-
 import torch
 from networks import NeuralNetwork_PINN
 from utilities import relative_error
@@ -24,8 +20,8 @@ nu = 0.01
 batch_size = 20000
 learning_rate = 0.001
 
-data_path = r'/root/autodl-tmp/133178'
-print_path = r'/root/ATLPINN/log4loss/diffreact_hard_50_100_increase.txt'
+data_path = r'/root/ATLPINN/data/Burgers.h5'
+print_path = r'/root/ATLPINN/result/burgers_pinn.txt'
 
 N_data = 100
 N_init = 100
@@ -36,7 +32,7 @@ N_eqns = 10000
 
 def run(tasks):
     create_date = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
-    log_path = "/root/tf-logs/Burgers1D-PINN-%d-%s.log4loss" % (tasks[0], create_date)
+    log_path = "/root/ATLPINN/log/Burgers1D-PINN-%d-%s.log" % (tasks[0], create_date)
     pinn_path = "/root/ATLPINN/output/burgers_pinn_%d.npy" % (tasks[0])
     solver_path = '/root/ATLPINN/output/burgers_solver_%d.npy' % (tasks[0])
 
@@ -79,6 +75,7 @@ def run(tasks):
     np.save(pinn_path, pinn_data)
 
 
-for i in range(0, 10):
+for i in range(0, 100):
     task = [i]
     run(task)
+
