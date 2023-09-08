@@ -1,6 +1,6 @@
 # ALT-PINN
 
-An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving](https://arxiv.org/abs/2307.06167), submitted to journal of computational physics, JCP. Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
+An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving](https://arxiv.org/abs/2307.06167), submitted to IEEE Transactions on Neural Networks and Learning Systems, TNNLS. Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
 
 -------------
 
