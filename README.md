@@ -1,13 +1,13 @@
 # ALT-PINN
 
-An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving](https://arxiv.org/abs/2307.06167), submitted to IEEE Transactions on Neural Networks and Learning Systems, TNNLS. Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
+An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed Neural Network-Based Partial Differential Equations Solving](https://arxiv.org/abs/2307.06167). Any communications or issues are welcomed. Please contact shuaicaijunjun@126.com. If you find this repository useful to your research or work, it is really appreciate to star this repository. :heart:
 
 -------------
 
 ### Overview
 
 <p align = "justify"> 
-Physics-informed neural networks (PINNs) have emerged as promising surrogate modes for solving partial differential equations (PDEs). Their effectiveness lies in the ability to capture solution-related features through neural networks. However, original PINNs often suffer from bottlenecks, such as low accuracy and non-convergence, limiting their applicability in complex physical contexts. To alleviate these issues, we proposed auxiliary-task learning-based physics-informed neural networks (ATL-PINNs), which provide four different auxiliary-task learning modes and investigate their performance compared with original PINNs. We also employ the gradient cosine similarity algorithm to integrate auxiliary problem loss with the primary problem loss in ATL-PINNs, which aims to enhance the effectiveness of the auxiliary-task learning modes. To the best of our knowledge, this is the first study to introduce auxiliary-task learning modes in the context of physics-informed learning. We conduct experiments on three PDE problems across different fields and scenarios. Our findings demonstrate that the proposed auxiliary-task learning modes can significantly improve solution accuracy, achieving a maximum performance boost of 96.62% (averaging 28.23%) compared to the original single-task PINNs.
+Physics-Informed Neural Networks (PINNs) have emerged as promising surrogate models for solving Partial Differential Equations (PDEs) due to their capacity to capture solution-related features using neural networks. However, the accuracy of original PINNs is often hindered by the uncertainty of the nonlinear PDE system and the instability of neural networks, particularly in elucidating complex physical phenomena. To address these limitations, we have undertaken a comprehensive study into the training processes and convergence mechanisms of physics-informed learning, leading to the development of ATL-PINN, an auxiliary-task learning framework tailored for PINNs. Our ATL-PINN framework concurrently solves multiple PDE tasks to narrow the latent solution space, enhancing the inductive bias and robustness of the underlying PDE's prediction accuracy. Subsequently, ATL-PINN introduces a network architecture integrated with customized feature extractors and gating networks to ensure resilient feature fusion. We also incorporate a gradient cosine similarity algorithm to steer the gradient descent process, mitigating the detrimental impacts of shared parameter updates. Our experimental results on three diverse PDE problems demonstrate that ATL-PINN substantially improves solution accuracy, with a peak performance enhancement of 96.62\% (averaging 32.27\%) compared to original PINNs.
 </p>
 
 <div  align="center">    
@@ -23,12 +23,6 @@ Physics-informed neural networks (PINNs) have emerged as promising surrogate mod
 ### Dataset
 
 All the PDEs case studies we used in our benchmark are download from [PDEBench Datasets](https://github.com/pdebench/PDEBench), and their files are publicly available on [PDEBench Datasets](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-2986). We randomly selected 100 tasks for each PDE problem to build a sub-dataset for our experiments. The sub-dataset was published in [Google Drive](https://drive.google.com/drive/folders/1n1lHasFJGIEEg_Nm792at2rJeB1QQh0W?usp=sharing).
-
-### Results
-
-<div  align="center">    
-    <img src="./fig/result.jpg" width=100%/>
-</div>
 
 ### Citation
 
