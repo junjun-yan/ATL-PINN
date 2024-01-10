@@ -10,9 +10,6 @@ An official source code for paper [Auxiliary-Tasks Learning for Physics-Informed
 Physics-Informed Neural Networks (PINNs) have emerged as promising surrogate models for solving Partial Differential Equations (PDEs) due to their capacity to capture solution-related features using neural networks. However, the accuracy of original PINNs is often hindered by the uncertainty of the nonlinear PDE system and the instability of neural networks, particularly in elucidating complex physical phenomena. To address these limitations, we have undertaken a comprehensive study into the training processes and convergence mechanisms of physics-informed learning, leading to the development of ATL-PINN, an auxiliary-task learning framework tailored for PINNs. Our ATL-PINN framework concurrently solves multiple PDE tasks to narrow the latent solution space, enhancing the inductive bias and robustness of the underlying PDE's prediction accuracy. Subsequently, ATL-PINN introduces a network architecture integrated with customized feature extractors and gating networks to ensure resilient feature fusion. We also incorporate a gradient cosine similarity algorithm to steer the gradient descent process, mitigating the detrimental impacts of shared parameter updates. Our experimental results on three diverse PDE problems demonstrate that ATL-PINN substantially improves solution accuracy, with a peak performance enhancement of 96.62\% (averaging 32.27\%) compared to original PINNs.
 </p>
 
-<div  align="center">    
-    <img src="./fig/git_atpinn.jpg" width=100%/>
-</div>
 
 ### Requirements
 
